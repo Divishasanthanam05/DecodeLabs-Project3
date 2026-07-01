@@ -1,0 +1,13 @@
+SELECT city, SUM(amount) AS total_revenue, AVG(amount) AS average_spend 
+FROM sales_records 
+WHERE city = 'Chennai';
+
+
+SELECT product_category, COUNT(order_id) AS total_orders, SUM(amount) AS category_revenue 
+FROM sales_records 
+GROUP BY product_category;
+
+
+SELECT customer_name, product_category, amount 
+FROM sales_records 
+ORDER BY amount DESC;
